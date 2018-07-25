@@ -14,7 +14,7 @@ import java.util.*;
 public class Start {
 
     public static void main(String[] args) throws Exception {
-// 1. Configure FreeMarker
+        // 1. Configure FreeMarker
         //
         // You should do this ONLY ONCE, when your application starts,
         // then reuse the same Configuration object elsewhere.
@@ -48,6 +48,8 @@ public class Start {
         systems.add(new ValueExampleObject("Ubuntu", "Canonical"));
         systems.add(new ValueExampleObject("Windows7", "Microsoft"));
         input.put("systems", systems);
+        input.put("indexOf", new IndexOfMethod());
+        input.put("repeat3ties", new Repeat3Times());
 
         // 2.2. Get the template
 

@@ -46,6 +46,44 @@ ${testString?upper_case?html}
 
 ${testString?cap_first}
 
+${exampleObject.repeat("Foo", 3)}
 
+    <#assign x = "something">
+    ${indexOf("met", x)}
+    ${indexOf("foo", x)}
+
+
+
+${repeat3ties(repeat3ties("Xuinya")) + repeat3ties("Fookalomukallo")?upper_case}
+
+
+    ${mouse!"No mouse."}
+    <#assign mouse="Jerry">
+    ${mouse!"No mouse."}
+
+    (${mouse1!})
+    <#assign mouse1 = "Jerry">
+    (${mouse1!})
+
+
+    <#if mouse2??>
+    Mouse found
+    <#else>
+    No mouse found
+    </#if>
+Creating mouse...
+    <#assign mouse2 = "Jerry">
+    <#if mouse2??>
+    Mouse found
+    <#else>
+    No mouse found
+    </#if>
+
+
+    <#macro something>
+    ...
+    </#macro>
+
+    #{something}
 
 </@u.page>
