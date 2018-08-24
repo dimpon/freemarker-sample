@@ -95,7 +95,7 @@ Creating mouse...
 
 
     <#macro something>
-    ...
+    ... This is macrooo!!!
     </#macro>
 
     <#assign sellCurrency = tradeUtils("getSellCurrency","${user}")>
@@ -132,5 +132,7 @@ Creating mouse...
 
 
 ${hea.repeat3times("X_")}
+
+<@something></@something>
 
 </@u.page>
